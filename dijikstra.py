@@ -4,6 +4,7 @@ start = "a"
 target = "h"
 
 distance = {
+    "a":float("inf"),
     "b":float("inf"),
     "c":float("inf"),
     "d":float("inf"),
