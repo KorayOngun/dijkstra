@@ -1,7 +1,13 @@
+import time
+
+tic = time.perf_counter()
+
 lines = [["a","c",6],["a","b",5],["e","c",2],["c","b",1],["b","f",1],["c","d",4],["f","d",3],["d","h",5],["f","h",2],["a","e",1]]
 
 start = "a"
 target = "h"
+
+
 
 distance = {
     "a":float("inf"),
@@ -18,9 +24,11 @@ for i in range(2):
             distance[d]=p
             continue
         else:
-            if distance[s]+p < distance[d]:
+            if distance[s]+p < distance[d]: 
                 distance[d] = distance[s]+p
-        
-    
+
+toc = time.perf_counter()
+
+print(f"{toc - tic:0.4f}")
 
 print(distance)
